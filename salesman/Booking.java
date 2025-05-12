@@ -1,13 +1,13 @@
 package salesman;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Represents a booking in the car rental system.
+ */
 public class Booking {
     private String bookingID;
     private String date;
@@ -16,10 +16,13 @@ public class Booking {
     private String customerID;
     private String carID;
     private boolean payment;
-    private double price;  // Added price field
+    private double price;
 
+    /**
+     * Constructs a Booking object.
+     */
     public Booking(String bookingID, String date, String status, boolean payment,
-                  String salesmanID, String customerID, String carID, double price) {
+                   String salesmanID, String customerID, String carID, double price) {
         this.bookingID = bookingID;
         this.date = date;
         this.status = status;
@@ -38,14 +41,16 @@ public class Booking {
     public String getStatus() { return status; }
     public String getDate() { return date; }
     public String getCustomerID() { return customerID; }
-    public double getPrice() { return price; }  // Properly implemented getPrice
-    public String getBookingDate() { return date; }  // Alias for getDate()
+    public double getPrice() { return price; }
 
     // Setters
     public void setStatus(String status) { this.status = status; }
     public void setPayment(boolean payment) { this.payment = payment; }
     public void setPrice(double price) { this.price = price; }
 
+    /**
+     * Converts the Booking object to a CSV string format.
+     */
     @Override
     public String toString() {
         return String.join(",",
@@ -56,17 +61,19 @@ public class Booking {
             salesmanID,
             customerID,
             carID,
-            String.valueOf(price)  // Added price to string representation
+            String.valueOf(price)
         );
     }
 
+    /**
+     * Reads bookings from a file and returns a list of Booking objects.
+     */
     public static List<Booking> readBookings(String filename) {
         List<Booking> list = new ArrayList<>();
         try (Scanner sc = new Scanner(new File(filename))) {
             while (sc.hasNextLine()) {
                 String[] data = sc.nextLine().split(",");
                 if (data.length >= 7) {
-                    // Handle files with or without price information
                     double price = data.length >= 8 ? Double.parseDouble(data[7]) : 0.0;
                     Booking b = new Booking(
                         data[0], data[1], data[2],
@@ -83,6 +90,9 @@ public class Booking {
         return list;
     }
 
+    /**
+     * Saves a list of Booking objects to a file.
+     */
     public static void saveBookings(String filename, List<Booking> bookings) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(filename))) {
             for (Booking b : bookings) {
