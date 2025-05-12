@@ -1,4 +1,4 @@
-package oop.assignment;
+package salesman;
 
 import java.util.List;
 

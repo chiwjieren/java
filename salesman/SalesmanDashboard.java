@@ -1,4 +1,4 @@
-package oop.assignment;
+package salesman;
 
 import javax.swing.*;
 import java.awt.*;

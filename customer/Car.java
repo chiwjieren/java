@@ -1,3 +1,5 @@
+package customer;
+
 import java.io.Serializable;
 
 public class Car implements Serializable {

@@ -1,4 +1,4 @@
-package oop.assignment;
+package salesman;
 
 public class Person {
     protected String id;

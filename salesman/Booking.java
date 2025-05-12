@@ -1,4 +1,4 @@
-package oop.assignment;
+package salesman;
 
 import java.io.File;
 import java.io.FileWriter;
