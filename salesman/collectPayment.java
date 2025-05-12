@@ -24,7 +24,7 @@ public class collectPayment extends JFrame {
                 if (column == 6 && comp instanceof JButton) {
                     return comp;
                 }
-                return super.prepareRenderer(renderer, row, column);
+                return comp; // <-- Add this line
             }
         };
 

@@ -1,8 +1,0 @@
-C001,Sedan,Toyota,Vios,2020,75000.0,34000,available
-C002,Sedan,Honda,City,2019,72000.0,41000,cancel
-C003,Hatchback,Perodua,Myvi,2021,53000.0,22000,booked
-C004,Sedan,Nissan,Almera,2022,80000.0,15000,paid
-C005,Sedan,Proton,Saga,2018,45000.0,55000,available
-C006,SUV,Honda,CR-V,2023,140000.0,8000,booked
-C007,MPV,Toyota,Innova,2020,120000.0,37000,paid
-C008,Hatchback,Volkswagen,Golf,2021,135000.0,18000,available

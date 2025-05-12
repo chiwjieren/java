@@ -1,10 +1,10 @@
 package salesman;
 
-import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
 public class viewSales {
     private Salesman salesman;
@@ -54,7 +54,7 @@ public class viewSales {
             rowData[i][2] = carInfo;
             rowData[i][3] = booking.getCustomerID();
             rowData[i][4] = carPrice; // Get price from car instead of booking
-            rowData[i][5] = booking.getBookingDate();
+            rowData[i][5] = booking.getDate();
             rowData[i][6] = booking.getStatus();
         }
         
