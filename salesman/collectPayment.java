@@ -1,13 +1,12 @@
 package salesman;
 
-import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableCellRenderer;
 import java.awt.*;
-import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.List;
 import java.util.Scanner;
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellRenderer;
 
 public class collectPayment extends JFrame {
 
@@ -96,6 +95,7 @@ public class collectPayment extends JFrame {
                 }
                 paymentID = String.format("P%03d", last + 1);
             } catch (Exception ex) {
+                ex.printStackTrace(); // Add this line
                 // Ignore, use default P001
             }
 
